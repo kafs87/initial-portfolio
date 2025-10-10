@@ -1,0 +1,262 @@
+body {
+    background-color: #000000;
+    background-image: url('../image/bg-code.png');
+    color: #fff;
+    font-family: "Sanchez", sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: "Krona One", sans-serif;
+    font-size: 24px;
+}
+
+.header-menu {
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    margin-right: 70px;
+}
+
+.header-menu a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 45px;
+    transition: transform 0.3s ease;
+}
+
+.header-menu a::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.header-link:hover {
+    transform: scale(1.07);
+    color: #123f77;
+}
+
+.header-menu a:hover::before {
+    background-color: #123f77;
+}
+
+.header-link:active {
+    transform: scale(0.99);
+    color: #22d4fd;
+}
+
+.text-blue {
+    color: #22d4fd;
+}
+
+.subtitle-blue {
+    font-size: 22px;
+}
+
+.title {
+    font-family: "Krona One", sans-serif;
+    font-size: 30px;
+}
+
+.subtitle {
+    font-family: "Sanchez", sans-serif;
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 145px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+.text-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #22d4fd;
+    text-align: center;
+    width: 97%;
+    border-radius: 16px;
+    font-size: 1.3rem;
+    padding: 15px 0;
+    color: #123f77;
+    font-family: "Sanchez", sans-serif;
+    font-weight: 700;
+    border: 1px solid #22d4fd;
+}
+
+.btn:hover {
+    background-color: #123f77;
+    color: #22d4fd;
+    transform: scale(1.05);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 121px;
+    height: 60px;
+    background-color: #22d4fd;
+    color: #123f77;
+    font-family: "Sanchez", sans-serif;
+    font-size: 18px;
+}
+
+.image-avatar {
+    width: 500px;
+}
+
+@media (max-width: 1200px) {
+    .header .inicio {
+        display: none;
+    }
+
+    .header {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-menu {
+        margin-right: 50px;
+        gap: 15px;
+        padding-top: 10px;
+    }
+
+    .header-menu a::before {
+        width: 8px;
+        height: 8px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .subtitle-blue {
+        font-size: 18px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        padding-top: 100px;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .conteudo {
+        margin-right: 0;
+    }
+
+    .text-container {
+        max-width: 600px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .btn {
+        padding: 8px 0px;
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    .image-avatar {
+        margin-right: 15px;
+        max-width: 70vw;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1500px) {
+    .header {
+        font-size: 22px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .subtitle-blue {
+        font-size: 20px;
+    }
+
+    .conteudo {
+        margin-right: 0
+    }
+
+    .container {
+        padding-top: 150px;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .text-container {
+        max-width: 550px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .btn {
+        padding: 8px 0px;
+        font-size: 1rem;
+        width:90%;
+    }
+
+    .image-avatar {
+        margin-right: 15px;
+        max-width: 70vw;
+        width: 75%;
+    }
+
+    .footer {
+        margin-top: 203px;
+    }
+}
