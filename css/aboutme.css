@@ -12,6 +12,7 @@ body {
 
 .header {
     display: flex;
+    color: #fff;
     align-items: center;
     justify-content: flex-end;
     font-family: "Krona One", sans-serif;
@@ -31,6 +32,11 @@ body {
     gap: 5px;
     margin-left: 45px;
     transition: transform 0.3s ease;
+}
+
+.header .sobre-mim {
+    color: #22d4fd;
+    font-size: 26px;
 }
 
 .header-menu a::before {
@@ -53,26 +59,12 @@ body {
 
 .header-link:active {
     transform: scale(0.99);
-    color: #22d4fd;
+    color: #123f77;
 }
 
 .text-blue {
     color: #22d4fd;
-}
-
-.subtitle-blue {
-    font-size: 22px;
-}
-
-.title {
-    font-family: "Krona One", sans-serif;
-    font-size: 30px;
-}
-
-.subtitle {
-    font-family: "Sanchez", sans-serif;
-    font-size: 20px;
-    margin-bottom: 70px;
+    font-weight: 500;
 }
 
 .container {
@@ -80,72 +72,105 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 190px;
-}
-
-.conteudo {
-    display: flex;
-    flex-direction: column;
-    margin-right: 100px;
-}
-
-.text-container {
-    max-width: 800px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.contact-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    justify-items: center;
-    align-items: center;
-}
-
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #22d4fd;
-    text-align: center;
-    width: 97%;
-    border-radius: 16px;
-    font-size: 1.3rem;
-    padding: 15px 0;
-    color: #123f77;
-    font-family: "Sanchez", sans-serif;
-    font-weight: 700;
-    border: 1px solid #22d4fd;
-}
-
-.btn:hover {
-    background-color: #123f77;
-    color: #22d4fd;
-    transform: scale(1.05);
+    padding-top: 145px;
+    padding-bottom: 78px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.title {
+    font-family: "Krona One", sans-serif;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.title:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease-in;
+}
+
+.subtitle {
+    font-family: "Sanchez", sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.first-paragraph:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease-in;
+}
+
+.second-paragraph:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease-in-out;
+}
+
+.third-paragraph:hover {
+    transform: scale(1.02);
+    transition: transform 0.5s ease-out;
+}
+
+.about-me {
+    max-width: 1200px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
     display: flex;
+    position: static;
     align-items: center;
     justify-content: center;
-    margin-top: 76px;
+    margin-top: 121px;
     height: 60px;
-    background-color: #22d4fd;
-    color: #123f77;
+    background-color: #0d1117;
+    color: #ffffff;
     font-family: "Sanchez", sans-serif;
     font-size: 18px;
 }
 
-.image-avatar {
-    width: 500px;
+@media (max-width: 1600px) {
+    .header {
+        font-size: 22px;
+    }
+
+    .container {
+    padding-top: 170px;
 }
 
-@media (max-width: 1200px) {
-    .header .inicio {
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+    
+}
+
+@media (max-width: 1218px) {
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-menu {
+        margin-right: 50px;
+        gap: 15px;
+    }
+
+        .container {
+    padding-top: 187px;
+}   
+
+    .about-me {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 720px) {
+    .header .sobre-mim {
         display: none;
     }
 
@@ -166,45 +191,26 @@ body {
         height: 8px;
     }
 
+    .about-me {
+        max-width: 350px;
+    }
+
+    .container {
+        padding-top: 100px;
+        flex-wrap: wrap;
+    }
+
     .title {
         font-size: 20px;
     }
 
     .subtitle {
         font-size: 16px;
-        margin-bottom: 50px;
     }
+}
 
-    .subtitle-blue {
-        font-size: 18px;
-    }
-
-    .container {
-        flex-direction: column-reverse;
-        padding-top: 100px;
-        gap: 50px;
-        flex-wrap: wrap;
-    }
-
-    .conteudo {
-        margin-right: 0;
-    }
-
-    .text-container {
-        max-width: 600px;
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .btn {
-        padding: 8px 0px;
-        font-size: 1rem;
-        width: 90%;
-    }
-
-    .image-avatar {
-        margin-right: 15px;
-        max-width: 70vw;
-        width: 100%;
+@media (max-width: 400px) {
+    .about-me {
+        max-width: 300px;
     }
 }
